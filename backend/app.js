@@ -30,6 +30,11 @@ mongoose.connect(process.env.DATABASE, {
   });
 
 
+//Middleware
+app.use(morgan('dev')) ;
+app.use(bodyParser.json({limit: '5mb'})) ;
+
+
 //port
 const port = process.env.PORT || 8000;
 
